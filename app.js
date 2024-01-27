@@ -35,6 +35,26 @@ function exibirMensagemInicial(){
 
 exibirMensagemInicial()
 
+function criarConfete(container) {
+    let confete = document.createElement("div");
+    confete.className = "confetti";
+    container.appendChild(confete);
+
+    setTimeout(function() {
+        container.removeChild(confete);
+    }, 2000); // Remover o confete após 2 segundos
+}  
+
+
+function celebrarVitoria() {
+    let confettiContainer = document.createElement("div");
+    confete.className = "confetti";
+
+    for (var i = 0; i < numeroLimite; i++) {
+        criarConfete(confettiContainer);
+    }
+}
+
 function verificarChute(){
     let chuteUsuario = document.querySelector('.container__input[type="number"]');
     let chute = chuteUsuario.value;
@@ -58,7 +78,9 @@ function verificarChute(){
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativas}!`; 
         exibirTextoNaTela('p', mensagemTentativas);
         trocarImagem('acertou');
+        celebrarVitoria();
         document.getElementById('reiniciar').removeAttribute('disabled');
+
     }else{
         chuteUsuario.classList.add("input-certo");
         chuteUsuario.classList.remove("input-errado");
