@@ -154,7 +154,7 @@ button:disabled {
     width: 10px;
     height: 10px;
     position: absolute;
-    animation: confettiFall linear 2s infinite;
+    animation: confettiFall linear 15s infinite;
 }
 
 .confetti:nth-child(1) {

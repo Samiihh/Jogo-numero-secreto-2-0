@@ -28,7 +28,7 @@ function trocarImagem(tag){
 }   
 
 function exibirMensagemInicial(){
-    exibirTextoNaTela('h1','Jogo do numero secreto');
+    exibirTextoNaTela('h1','Jogo do número secreto');
     exibirTextoNaTela('p','Escolha um número entre:');
 
 }
@@ -74,7 +74,7 @@ function verificarChute(){
         chuteUsuario.classList.add("input-certo");
         chuteUsuario.classList.remove("input-errado");
 
-        exibirTextoNaTela('h1', 'acertou');
+        exibirTextoNaTela('h1', 'Parabéns, você acertou');
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativas}!`; 
         exibirTextoNaTela('p', mensagemTentativas);
         trocarImagem('acertou');
